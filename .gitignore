@@ -1,0 +1,8 @@
+/node_modules
+/data
+/cache
+/build
+config.json
+db.json
+
+
