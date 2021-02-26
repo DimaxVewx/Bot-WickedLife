@@ -29,8 +29,8 @@ module.exports = class {
 
         // }, 3600000);
 
-        const channel = this.client.channels.get("792505732225957968");
-        channel.send(":gear: J'ai bien redémarré !")
+        //const channel = this.client.channels.get("792505732225957968");
+        //channel.send(":gear: J'ai bien redémarré !")
 
 
         this.client.logger.log(
