@@ -11,6 +11,6 @@ module.exports = class {
             .setColor("#ffa300")
             .setDescription('Le Joueur **' + member.user.username + '** a **quitte le discord**')
 
-        member.guild.channels.get('769642347428053012').send(embed)
+        member.guild.channels.get('792501554116427797').send(embed)
     }
 };

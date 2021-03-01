@@ -1,4 +1,6 @@
 ﻿const Discord = require("discord.js");
+const { promisify } = require('util');
+const wait = promisify(setTimeout);
 
 module.exports = class {
     constructor(client) {
@@ -15,21 +17,6 @@ module.exports = class {
 
         this.client.user.setActivity("WickedLife | SYS.");
         this.client.user.setStatus("dnd");
-
-        //const channelmsg = this.client.channels.get("792503569584226304");
-        //let topvote = new Discord.RichEmbed()
-         //.setColor("#ffa300")
-         //.setAuthor(this.client.user.username, this.client.user.displayAvatarURL)
-         //.setTitle(`Vous pouvez voter toute les 2 heures par adresse ip et récupérer une récompense.`)
-         //.setFooter('Vous devez écrire votre nom steam pour recevoir la récompense')
-         //.setDescription(`https://top-serveurs.net/gta/wickedliferp`)
-
-         //setInterval(() => {
-            // channelmsg.send(topvote)
-
-        // }, 3600000);
-
-
 
         this.client.logger.log(
             `Hihi je suis prêt à espionner ${
