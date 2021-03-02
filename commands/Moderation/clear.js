@@ -1,5 +1,6 @@
 const Command = require("../../modules/Command.js");
 const Discord = require("discord.js");
+const { relativeTimeRounding } = require("moment");
 
 class Clear extends Command {
     constructor(client) {
@@ -13,28 +14,23 @@ class Clear extends Command {
     }
 
     async run(message, args) {
-        try {
-            message.channel.bulkDelete(args[0]).then(() => {
-                message.channel
-                    .send(`Je supprime ***${args[0]} messages*** pour vos ordres.`)
-                    .then(message => message.delete(5000));
-            })
 
-            let ClearLogs = new Discord.RichEmbed()
-                .setTitle('**Logs Modération (Clear)**')
-                .setColor("#ffa300")
-                .addField(`Modo: `, `${message.author.username}`)
-                .addField(`Modo (ID): `, `${message.author.id}`)
-                .addField(`Clear Channel: `, message.channel)
-                .addField(`Lignes Supprimées: `, `**${args[0]}**`)
-                .setTimestamp()
-
-            let LogsClear = message.guild.channels.find(`name`, "post-discord");
-            LogsClear.send(ClearLogs);
-
-        } catch (e) {
-            console.log(e);
+        const messageArray = message.content.split(' ');
+        
+        let deleteAmount;
+    
+        if (isNaN(args[0]) || parseInt(args[0]) <= 0) { return message.reply('⚠️ Entrer un nombre réel....') }
+    
+        if (parseInt(args[0]) > 99) {
+            return message.reply('⚠️ Tu peux pas dépasser plus de 99 lignes...')
+        } else {
+            deleteAmount = parseInt(args[0]);
         }
+    
+        message.channel.bulkDelete(deleteAmount + 1, true);
+        message.reply(`⚠️ ${deleteAmount} en moins.`)
+
+
     }
 }
 
