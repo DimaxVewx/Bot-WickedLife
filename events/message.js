@@ -14,6 +14,7 @@ module.exports = class {
      Merci pour votre patience et bonne journée.
       `;
 
+
       //  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ MESSAGE BONJOUR REPLY ! \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
       
       switch (message.content.toLowerCase()) {
@@ -44,47 +45,15 @@ module.exports = class {
 
             //  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-      //  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Insultes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\     
+      //  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Insultes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\   
+      
+      let ohlalalagromos = ["fdp", "fils de pute", "connard", "tg", "va te faire", "ftg"]
 
-      if(message.content === 'fdp') {
-        message.delete(1);
-        message.author.send('La prochaine fois tu vas te prendre un petit kick je crois.')
-      };
+      if (ohlalalagromos.some(word => message.content.toLowerCase().includes(word))) {
+        await message.delete();
+        return message.channel.send("Non, pas d'insultes ici...")
+      }
 
-      if(message.content === 'fils de pute') {
-        message.delete(1);
-        message.author.send('La prochaine fois tu vas te prendre un petit kick je crois.')
-      };
-
-      if(message.content === 'connard') {
-        message.delete(1);
-        message.author.send('La prochaine fois tu vas te prendre un petit kick je crois.')
-      };
-
-      if(message.content === 'tg') {
-        message.delete(1);
-        message.author.send('La prochaine fois tu vas te prendre un petit kick je crois.')
-      };
-
-      if(message.content === 'va te faire foutre') {
-        message.delete(1);
-        message.author.send('La prochaine fois tu vas te prendre un petit kick je crois.')
-      };
-
-      if(message.content === 'ftg') {
-        message.delete(1);
-        message.author.send('La prochaine fois tu vas te prendre un petit kick je crois.')
-      };
-
-      if(message.content === 'con') {
-        message.delete(1);
-        message.author.send('La prochaine fois tu vas te prendre un petit kick je crois.')
-      };
-
-      if(message.content === 'sale con') {
-        message.delete(1);
-        message.author.send('La prochaine fois tu vas te prendre un petit kick je crois.')
-      };
 
     
 
