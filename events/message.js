@@ -8,8 +8,10 @@ module.exports = class {
       if (message.author.bot) return;
       const joueurcc = message.author;
       let messagemaintenance = `
-            ⚠**__Message Important__** ⚠ - **Prendre le temps de lire **
-  ** No CitizenFX ticket was specified, If this is an offline server, maybe set sv_lan ** ? 
+
+      
+               ⚠**__Message Important__** ⚠ - **Prendre le temps de lire **
+     ** No CitizenFX ticket was specified, If this is an offline server, maybe set sv_lan ** ? 
      Il sera probablement corrigé dans les prochaines heures. Pas de nouvelle car nous n'avons aucun contrôle là-dessus.
      Merci pour votre patience et bonne journée.
       `;
@@ -42,8 +44,8 @@ module.exports = class {
       }
 
 
-
             //  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
       //  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Insultes \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\   
       
@@ -55,7 +57,17 @@ module.exports = class {
       }
 
 
-    
+     // let maintenancefivem = ["off", "marche pas", "se co", "down", "serveur", "offline", "erreur"]
+
+     // if (maintenancefivem.some(word => message.content.toLowerCase().includes(word))) {
+      //  await message.delete();
+      //  return message.channel.send(messagemaintenance)
+
+
+      
+        
+     // }
+
 
 
       // Système de level !
